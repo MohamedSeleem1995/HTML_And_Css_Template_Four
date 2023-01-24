@@ -6,6 +6,11 @@
     --red-color: #f44336;
     --grey-color: #888;
 }
+/* Important */
+.important {
+    display: flex !important;
+}
+/* End Important */
 /* Start Box */
 .d-flex {
     display: flex;
@@ -41,14 +46,23 @@
 .pb-10 {
     padding-bottom: .625rem;
 }
+.pr-10 {
+    padding-right: .625rem;
+}
 .p-15 {
     padding: .9375rem;
+}
+.pl-15 {
+    padding-left: .9375rem;
 }
 .pt-15 {
     padding-top: .9375rem;
 }
 .pb-15 {
     padding-bottom: .9375rem;
+}
+.pb-20 {
+    padding-bottom: 1.25rem;
 }
 .p-20 {
     padding: 1.25rem;
@@ -65,17 +79,32 @@
 .mb-5 {
     margin-bottom: .3125rem;
 }
+.mr-10 {
+    margin-right: .625rem;
+}
 .mb-10 {
     margin-bottom: .625rem;
 }
 .mt-10 {
     margin-top: .625rem;
 }
+.mt-15 {
+    margin-top: .9375rem;
+}
+.mr-15 {
+    margin-right: .9375rem;
+}
 .m-20 {
     margin: 1.25rem;
 }
 .mt-20 {
     margin-top: 1.25rem;
+}
+.mt-25 {
+    margin-top: 1.5625rem;
+}
+.mb-25 {
+    margin-bottom: 1.5625rem;
 }
 .mb-20 {
     margin-bottom: 1.25rem;
@@ -85,6 +114,9 @@
 }
 .w-fit {
     width: fit-content;
+}
+.h-full {
+    height: 100%;
 }
 /* End Padding & Margin */
 /* Start Color */
@@ -99,6 +131,9 @@
 }
 .bg-orange {
     background-color: var(--orange-color);
+}
+.bg-red {
+    background-color: var(--red-color);
 }
 .bg-green {
     background-color: var(--green-color);
@@ -133,6 +168,9 @@
 /* Start Font */
 .txt-c {
     text-align: center;
+}
+.fs-13 {
+    font-size: .8125rem;
 }
 .fs-14 {
     font-size: .875rem;
@@ -169,6 +207,13 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+.rad-half {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 /* End Border */
 /* Start Components */
