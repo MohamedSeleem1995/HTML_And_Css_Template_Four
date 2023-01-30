@@ -609,6 +609,552 @@ p {
 }
 /* End Projects Table */
 /* End Content */
+/* Start Settings Content */
+.settings-page {
+    grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
+}
+@media (max-width: 47.9375rem) {
+    .settings-page {
+        grid-template-columns: minmax(6.25rem, 1fr);
+        gap: .625rem;
+        margin-left: .625rem;
+        margin-right: .625rem;
+    }
+}
+.toggle-checkbox {
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--blue-color);
+}
+.toggle-switch {
+    position: relative;
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    transition: all 0.3;
+    -webkit-transition: all 0.3;
+    -moz-transition: all 0.3;
+    -ms-transition: all 0.3;
+    -o-transition: all 0.3;
+    cursor: pointer;
+}
+.toggle-switch::before {
+    content: "\f00d";
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    color: #aaa;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    content: "\f00c";
+    color: var(--blue-color);
+    left: 52px;
+}
+.settings-page textarea {
+    resize: none;
+    min-height: 150px;
+    border: solid 1px #ccc;
+}
+#first,
+#last,
+#email {
+    border: 1px solid #ccc;
+}
+.settings-page :disabled {
+    cursor: no-drop;
+    color: #bbb;
+    background-color: #f0f4f8;
+}
+#email {
+    display: inline-block;
+    width: calc(100% - 80px);
+}
+.sec-box .button {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.sec-box .button:hover {
+    background-color: var(--blue-alt-color);
+}
+.widgets-control .control input[type="checkbox"] {
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.widgets-control .control label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+}
+.widgets-control .control label::before,
+.widgets-control .control label::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.widgets-control .control label::before {
+    content: "";
+    border: solid var(--grey-color) 2px;
+    width: 15px;
+    height: 15px;
+}
+.widgets-control .control label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+.widgets-control .control label::after {
+    content: "\f00c";
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    font-size: 14px;
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(360deg);
+    background-color: var(--blue-color);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transform: scale(0) rotate(360deg);
+    -moz-transform: scale(0) rotate(360deg);
+    -ms-transform: scale(0) rotate(360deg);
+    -o-transform: scale(0) rotate(360deg);
+}
+.widgets-control .control input[type="checkbox"]:checked + label::after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.settings-page .social-boxes i {
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    -webkit-border-radius: 6px 0 0 6px;
+    -moz-border-radius: 6px 0 0 6px;
+    -ms-border-radius: 6px 0 0 6px;
+    -o-border-radius: 6px 0 0 6px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.settings-page .social-boxes i + input {
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    border-radius: 0 6px 6px 0;
+    -webkit-border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    -ms-border-radius: 0 6px 6px 0;
+    -o-border-radius: 0 6px 6px 0;
+}
+.settings-page .social-boxes > div:focus-within i {
+    color: black;
+}
+.settings-page .social-boxes input::placeholder {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.settings-page .social-boxes input:focus::placeholder {
+    color: black;
+}
+.backup-control input[type="radio"] {
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.backup-control .date label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.backup-control .date label::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    left: 0;
+    top: 50%;
+    margin-top: -11px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+.backup-control .date label::after {
+    content: "";
+    position: absolute;
+    background-color: var(--blue-color);
+    width: 12px;
+    height: 12px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+.backup-control .date input[type="radio"]:checked + label::before {
+    border-color: var(--blue-color);
+}
+.backup-control .date input[type="radio"]:checked + label::after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.backup-control .servers {
+    border-top: 1px solid #eee;
+    padding-top: 1.25rem;
+}
+@media(max-width: 47.9375rem) {
+    .backup-control .servers {
+        flex-wrap: wrap;
+    }
+}
+.backup-control .servers .server {
+    border: 2px solid #eee;
+}
+.backup-control .servers .server label {
+    cursor: pointer;
+}
+.backup-control .servers > input[type="radio"]:checked + .server {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+/* End Settings Content */
+/* Start Profile Content */
+@media (max-width: 47.9375rem) {
+    .profile-page .overview {
+        flex-direction: column;
+    }
+}
+.overview .avatar-box {
+    width: 18.75rem;
+}
+@media (min-width: 48rem) {
+    .overview .avatar-box {
+        border-right: 1px solid #eee;
+    }
+}
+.overview .avatar-box .level {
+    height: 6px;
+    margin: auto;
+    width: 70%;
+} 
+.overview .avatar-box .level span {
+    position: absolute;
+    background-color: var(--blue-color);
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.profile-page .info-box .box {
+    flex-wrap: wrap;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3S;
+    -moz-transition: all 0.3S;
+    -ms-transition: all 0.3S;
+    -o-transition: all 0.3S;
+}
+.profile-page .info-box .box:hover {
+    background-color: #f9f9f9f9;
+}
+.profile-page .info-box .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.profile-page .info-box h4 {
+    font-weight: normal;
+}
+.profile-page .info-box .box > div {
+    min-width: 250px;
+    padding: .625rem 0 0;
+}
+.profile-page .info-box .toggle-switch {
+    height: 20px;
+}
+@media (max-width: 47.9375rem) {
+    .profile-page .info-box .toggle-switch {
+        margin: auto;
+    }
+}
+.profile-page .info-box .toggle-switch::before {
+    height: 12px;
+    width: 12px;
+    font-size: 10px;
+}
+.profile-page .info-box .toggle-checkbox:checked + .toggle-switch::before {
+    left: 62px;
+}
+/* End Trainig Code  */
+@media (max-width: 47.9375rem) {
+    .profile-page .other-data {
+        flex-direction: column;
+        border: red;
+    }
+}
+.profile-page .skills-card {
+    flex: 1;
+}
+.profile-page .skills-card ul li {
+    padding: .9375rem 0;
+}
+.profile-page .skills-card ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.profile-page .skills-card ul li span {
+    display: inline-flex;
+    background-color: #eee;
+    padding: 4px 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-size: 15px;
+}
+.profile-page .skills-card ul li span:not(:last-child) {
+    margin-right: .3125rem;
+}
+.profile-page .activities {
+    flex: 2;
+}
+.profile-page .activities .activity:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+@media (min-width: 48rem) {
+    .profile-page .activity .date {
+        text-align: right;
+        margin-left: auto;
+    }
+}
+@media (max-width: 47.9375rem) {
+    .profile-page .activities .activity {
+        flex-direction: column;
+    }
+    .profile-page .activity img {
+        margin: 0 0 .9375rem;
+    } 
+    .profile-page .activity .date {
+        margin-top: .9375rem;
+    }
+}
+/* END Profile Content */
+/* Start Projects Content */
+.projects-page {
+    grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
+}
+@media(max-width: 47.9375rem) {
+    .projects-page {
+        grid-template-columns: minmax(12.5rem, 1fr);
+        gap: .625rem;
+        margin-left: .625rem;
+        margin-right: .625rem;
+    }
+}
+.projects-page .project .team {
+    position: relative;
+    min-height: 80px;
+}
+.projects-page .project .team a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.projects-page .project .team a:nth-child(2) {
+    left: 25px;
+}
+.projects-page .project .team a:nth-child(3) {
+    left: 50px;
+}
+.projects-page .project .team a:nth-child(4) {
+    left: 75px;
+}
+.projects-page .project .team a:nth-child(5) {
+    left: 100px;
+}
+.projects-page .project .team a:hover {
+    z-index: 5;
+}
+.projects-page .project .team img {
+    border: 2px solid white;
+}
+.projects-page .project .do {
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: .9375rem;
+    padding: .9375rem 0 .9375rem;
+}
+@media (max-width: 47.9375rem) {
+    .projects-page .project .do {
+        flex-direction: column;
+    }
+    .projects-page .project .do span:not(:last-child) {
+        margin-bottom: .9375rem;
+    }
+    .projects-page .project .info {
+        flex-direction: column; 
+    }
+    .projects-page .project .info .prog {
+        margin-bottom: 15px;
+    }
+}
+.projects-page .project .do span {
+    padding: 4px 8px;
+    margin-left: 5px;
+    width: fit-content;
+}
+.projects-page .project .info .prog {
+    width: 260px;
+    position: relative;
+    height: 8px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.projects-page .project .date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.projects-page .project h4 {
+    font-weight: normal;
+}
+.projects-page .project .info .prog span {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+/* End Projects Content */
+/* Start Cources Content */
+.courses-page {
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+}
+@media (max-width: 47.9375rem) {
+    .courses-page {
+        grid-template-columns: minmax(12.5rem, 1fr);
+        gap: .625rem;
+        margin: auto .625rem auto;
+    }
+}
+.courses-page .course {
+    overflow: hidden;
+}
+.courses-page .course .cover {
+    max-width: 100%;
+}
+.courses-page .course .instructor {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 20px;
+    top: 20px;
+    border: 2px solid #FFFFFF;
+}
+.courses-page .course .description {
+    line-height: 1.6;
+}
+.courses-page .course .info {
+    border-top: 1px solid #eee;
+}
+.course .info .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    top: -13px;
+}
+/* End Cources Content */
 /* Start Animation */
 @keyframes change-color {
     0% {

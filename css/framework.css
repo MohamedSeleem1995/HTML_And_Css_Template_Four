@@ -21,8 +21,11 @@
 .d-grid {
     display: grid;
 }
+.gap-10 {
+    gap: .625rem;
+}
 .gap-20 {
-    gap: 20px;
+    gap: 1.25rem;
 }
 .d-block {
     display: block;
@@ -76,6 +79,9 @@
 .mt-5 {
     margin-top: .3125rem;
 }
+.mb-0 {
+    margin-bottom: 0;
+}
 .mb-5 {
     margin-bottom: .3125rem;
 }
@@ -84,6 +90,12 @@
 }
 .mb-10 {
     margin-bottom: .625rem;
+}
+.m-15 {
+    margin: .9375rem;
+}
+.mb-15 {
+    margin-bottom: .9375rem;
 }
 .mt-10 {
     margin-top: .625rem;
@@ -193,6 +205,12 @@
 /* Start Border */
 .b-none {
     border: none;
+}
+.bb-ccc {
+    border-bottom: 1px solid #ccc;
+}
+.bb-eee {
+    border-bottom: solid 1px #eee;
 }
 .rad-6 {
     border-radius: 6px;
