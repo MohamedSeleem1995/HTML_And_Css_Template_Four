@@ -176,6 +176,9 @@
 .p-relative {
     position: relative;
 }
+.p-absolute {
+    position: absolute;
+}
 /* End Position */
 /* Start Font */
 .txt-c {
@@ -192,6 +195,9 @@
 }
 .fs-25 {
     font-size: 1.5625rem;
+}
+.fs-40 {
+    font-size: 2.5rem;
 }
 @media (max-width: 47.9375rem) {
     .txt-c-mobile {
@@ -211,6 +217,9 @@
 }
 .bb-eee {
     border-bottom: solid 1px #eee;
+}
+.b-eee {
+    border: 1px solid #eee;
 }
 .rad-6 {
     border-radius: 6px;
